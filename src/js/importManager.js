@@ -212,7 +212,8 @@ class ImportManager {
           const blob = item.name ? item : item.getAsFile(); // Blob or File
           this._emitAddImageBlobHook(blob, evData.type);
 
-          return false;
+          // this will break forEach loop
+          // return false;
         }
 
         return true;
